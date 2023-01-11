@@ -1,0 +1,42 @@
+
+
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+header.header{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.header__ul{
+    list-style: none;
+    display: flex;
+}
+
+.header__nav{
+    display: flex;
+    justify-content: space-around;
+}
+
+.header__ul li{
+    margin: 4px 8px;
+}
+.header__ul li:hover a{
+    color: rgb(213, 213, 213);
+}
+
+.header__ul li a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: color 200ms ease-in-out;
+}
