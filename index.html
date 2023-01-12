@@ -23,25 +23,33 @@
 <body>
     <header class="header">
         <div class="wrapper header__container">
-            <nav class="header__nav">
-                <div class="header__logo">
-                    <!-- <h1 class="">The Social Beez</h1> -->
-                    <img class="logo__img" src="assets/img/thesocialbeezlogo-removebg-preview.png" alt="">
-                </div>
+            <nav class="header__nav" id="header__nav" aria-expanded="false">
 
-                <div class="header__toggle">
-                    <button class="toggle_btn" id="toggle_btn" aria-expanded="false">
-                        <span class="line line-top"></span>
-                        <span class="line line-mid"></span>
-                        <span class="line line-bot"></span>
-                    </button>
+                <div class="nav__container">
+                    <div class="header__logo">
+                        <a href="#">
+                            <img class="logo__img" src="assets/img/thesocialbeezlogo-removebg-preview-md.png" alt="">
+                        </a>
+                    </div>
+
+                    <div class="header__toggle">
+                        <button class="toggle_btn" id="toggle_btn" aria-expanded="false">
+                            <span class="line line-top"></span>
+                            <span class="line line-mid"></span>
+                            <span class="line line-bot"></span>
+                        </button>
+                    </div>
                 </div>
 
                 <ul class="header__ul">
                     <li><a href="#">Home</a></li>
+                    <hr class="ul__hr">
                     <li><a href="#">About</a></li>
+                    <hr class="ul__hr">
                     <li><a href="#">Services</a></li>
+                    <hr class="ul__hr">
                     <li><a href="#">Our Blog</a></li>
+                    <hr class="ul__hr">
                     <li><a href="#">Contact us</a></li>
                 </ul>
             </nav>
@@ -50,11 +58,23 @@
 </body>
 
 <script defer>
-    toggle_btn.addEventListener("click",()=>{
-        if(toggle_btn.getAttribute('aria-expanded')==="false"){
-            toggle_btn.setAttribute('aria-expanded','true')
-        } else{
-            toggle_btn.setAttribute('aria-expanded','false')
+    toggle_btn.addEventListener("click", () => {
+        if (toggle_btn.getAttribute('aria-expanded') === "false") {
+            toggle_btn.setAttribute('aria-expanded', 'true');
+            // setTimeout(() => {
+            header__nav.setAttribute('aria-expanded', 'true');
+            // }, 300);
+            document.querySelector(".header__ul").classList.remove("list_animate_close")
+            document.querySelector(".header__ul").classList.add("list_animate_open")
+
+        } else {
+            toggle_btn.setAttribute('aria-expanded', 'false');
+            setTimeout(() => {
+                header__nav.setAttribute('aria-expanded', 'false');
+            }, 300);
+            document.querySelector(".header__ul").classList.remove("list_animate_open")
+            document.querySelector(".header__ul").classList.add("list_animate_close")
+
         }
     })
 </script>
