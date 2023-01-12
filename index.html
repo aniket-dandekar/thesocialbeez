@@ -16,21 +16,25 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
     <header class="header">
-        <div class="header__container">
+        <div class="wrapper header__container">
             <nav class="header__nav">
                 <div class="header__logo">
-                    <h1 class="">The Social Beez</h1>
-                    <!-- <img src="assets/img/logo.jpeg" alt=""> -->
+                    <!-- <h1 class="">The Social Beez</h1> -->
+                    <img class="logo__img" src="assets/img/thesocialbeezlogo-removebg-preview.png" alt="">
                 </div>
 
                 <div class="header__toggle">
-                    <button>55</button>
+                    <button class="toggle_btn" id="toggle_btn" aria-expanded="false">
+                        <span class="line line-top"></span>
+                        <span class="line line-mid"></span>
+                        <span class="line line-bot"></span>
+                    </button>
                 </div>
 
                 <ul class="header__ul">
@@ -44,5 +48,15 @@
         </div>
     </header>
 </body>
+
+<script defer>
+    toggle_btn.addEventListener("click",()=>{
+        if(toggle_btn.getAttribute('aria-expanded')==="false"){
+            toggle_btn.setAttribute('aria-expanded','true')
+        } else{
+            toggle_btn.setAttribute('aria-expanded','false')
+        }
+    })
+</script>
 
 </html>
