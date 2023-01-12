@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <header class="header">
+    <header role="heading" class="header">
         <div class="wrapper header__container">
             <nav class="header__nav" id="header__nav" aria-expanded="false">
 
@@ -42,41 +42,24 @@
                 </div>
 
                 <ul class="header__ul">
-                    <li><a href="#">Home</a></li>
-                    <hr class="ul__hr">
-                    <li><a href="#">About</a></li>
-                    <hr class="ul__hr">
-                    <li><a href="#">Services</a></li>
-                    <hr class="ul__hr">
-                    <li><a href="#">Our Blog</a></li>
-                    <hr class="ul__hr">
+                    <li><a href="#">Home</a></li><hr class="ul__hr">
+                    <li><a href="#">About</a></li><hr class="ul__hr">
+                    <li><a href="#">Services</a></li><hr class="ul__hr">
+                    <li><a href="#">Our Blog</a></li><hr class="ul__hr">
                     <li><a href="#">Contact us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <main role="banner" class="main">
+        <div class="wrapper ">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos fuga praesentium aperiam consectetur. Laborum placeat, maxime doloribus quas deleniti dolorum consectetur error eaque fugit culpa veniam illo totam, debitis eius velit deserunt voluptatem in!</p>
+        </div>
+    </main>
 </body>
 
-<script defer>
-    toggle_btn.addEventListener("click", () => {
-        if (toggle_btn.getAttribute('aria-expanded') === "false") {
-            toggle_btn.setAttribute('aria-expanded', 'true');
-            // setTimeout(() => {
-            header__nav.setAttribute('aria-expanded', 'true');
-            // }, 300);
-            document.querySelector(".header__ul").classList.remove("list_animate_close")
-            document.querySelector(".header__ul").classList.add("list_animate_open")
-
-        } else {
-            toggle_btn.setAttribute('aria-expanded', 'false');
-            setTimeout(() => {
-                header__nav.setAttribute('aria-expanded', 'false');
-            }, 300);
-            document.querySelector(".header__ul").classList.remove("list_animate_open")
-            document.querySelector(".header__ul").classList.add("list_animate_close")
-
-        }
-    })
+<script defer src="assets/js/the-social-beez-main.js">
 </script>
 
 </html>
