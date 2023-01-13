@@ -7,9 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Social Beez | Kick start your buisness growth!</title>
 
+    <link rel="shortcut icon" href="assets/img/bee.png" type="image/x-icon">
+
     <!-- Main css -->
     <link rel="stylesheet" href="assets/css/the-social-beez-main.css">
-
     <link rel="stylesheet" href="assets/css/utils.css">
 
     <!-- Main js -->
@@ -19,13 +20,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
     <header role="heading" class="header">
-        <div class="wrapper header__container">
+        <div class="wrapper header__container bx-shadow">
             <nav class="header__nav" id="header__nav" aria-expanded="false">
 
                 <div class="nav__container">
@@ -60,17 +62,56 @@
     </header>
 
     <section role="banner" class="banner__section">
-        <div class="wrapper banner__container flex-center-center flex-col">
-            <h1 class="banner__h1 text-center text-white">
-                KICK START YOUR <span class="honey">BUSINESS GROWTH</span>
-                <br>
-                WITH <span class="honey">SOCIALBEEZ.</span>
-            </h1>
-            <p class="banner__desc text-white text-center">We are a digital marketing agency led by a trio in Badlapur, Thane,
-                <br> and we are eager to support and grow your brand.</p>
-            <p class="p-btn"><a href="#" class="banner__btn">Discover more</a></p>
+        <div class="wrapper banner__container">
+            <div class="banner__content flex-center-center flex-col">
+                <h1 class="banner__h1 text-center text-white">
+                    KICK START YOUR <span class="honey">BUSINESS GROWTH</span>
+                    <br>
+                    WITH <span class="honey">SOCIALBEEZ.</span>
+                </h1>
+                <p class="banner__desc text-white text-center">We are a digital marketing agency led by a trio in
+                    Badlapur, Thane,
+                    <br> and we are eager to support and grow your brand.
+                </p>
+                <p class="p-btn"><a href="#main__section" class="banner__btn">Discover more</a></p>
+            </div>
         </div>
     </section>
+
+    <section role="main" id="main__section" class="main__section">
+        <div class="wrapper main__container">
+            <h1 class="main__header text-center">our <span class="honey">Services</span></h1>
+            <div class="main__content d-flex items-center justify-between flex-wrap">
+                <div class="main__card d-flex flex-col items-center bx-shadow">
+                    <div class="card__img flex-center-center">
+                        <img src="assets/img/bee.png" alt="card-logo">
+                    </div>
+                    <h2 class="card__title">Modern Strategy</h2>
+                    <p class="card__desc text-center">Customize your strategy according to your needs</p>
+                </div>
+
+                <div class="main__card d-flex flex-col items-center bx-shadow">
+                    <div class="card__img flex-center-center">
+                        <img src="assets/img/bee.png" alt="card-logo">
+                    </div>
+                    <h2 class="card__title">Best Relationship</h2>
+                    <p class="card__desc text-center">Contact us immediately if you have a question in mind</p>
+                </div>
+
+                <div class="main__card d-flex flex-col items-center bx-shadow">
+                    <div class="card__img flex-center-center">
+                        <img src="assets/img/bee.png" alt="card-logo">
+                    </div>
+                    <h2 class="card__title">Ultimate Marketing</h2>
+                    <p class="card__desc text-center">Using best resources according to your needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="p">
+        
+    </div>
 </body>
 
 <script defer src="assets/js/the-social-beez-main.js">

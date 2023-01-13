@@ -10,6 +10,9 @@
 .justify-center{
     justify-content: center;
 }
+.justify-between{
+    justify-content: space-around;
+}
 .items-center{
     align-items: center;
 }
@@ -21,6 +24,12 @@
 .flex-col{
     flex-direction: column;
 }
+.flex-wrap{
+    flex-wrap: wrap;
+}
 .honey{
     color: #fcb404;
+}
+.bx-shadow{
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 10%);
 }
