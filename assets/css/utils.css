@@ -33,3 +33,24 @@
 .bx-shadow{
     box-shadow: 0px 0px 15px rgb(0 0 0 / 10%);
 }
+.mx-1{
+    margin-block: 1rem;
+}
+.mx-1_2{
+    margin-block: 0.5rem;
+}
+.mx-1_4{
+    margin-block: 0.25rem;
+}
+.mx-1_4{
+    margin-block: 0.125rem;
+}
+.mt-5{
+    margin-top: 5rem;
+}
+.mt-6{
+    margin-top: 6rem;
+}
+.text-gray{
+    color: #686868;
+}
