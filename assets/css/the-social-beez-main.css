@@ -275,6 +275,7 @@ section.banner__section {
 
 .banner__container {
     min-height: 100vh;
+    height: -webkit-fill-available;
 }
 
 .banner__content {
