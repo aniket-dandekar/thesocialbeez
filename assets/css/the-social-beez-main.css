@@ -66,7 +66,12 @@ body {
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.0625rem;
+    margin: 2rem auto;
+}
+
+.section-mps {
     margin: 3rem auto;
+    padding: 1rem 0;
 }
 
 /* header section */
@@ -208,7 +213,7 @@ header.header {
     background-color: #F3C301;
 }
 
-.header__toggle button.toggle_btn {
+.header__toggle button.toggle-btn {
     height: 1.75rem;
     width: 1.875rem;
     color: #000000;
@@ -220,7 +225,7 @@ header.header {
     background: transparent;
 }
 
-.header__toggle button.toggle_btn .line {
+.header__toggle button.toggle-btn .line {
     height: 0.155rem;
     background-color: #000000;
     width: 80%;
@@ -230,34 +235,34 @@ header.header {
         rotate 150ms
 }
 
-.header__toggle button.toggle_btn .line-top {
+.header__toggle button.toggle-btn .line-top {
     position: absolute;
     top: 22.22%;
     transform-origin: center;
 }
 
-.header__toggle button.toggle_btn .line-mid {
+.header__toggle button.toggle-btn .line-mid {
     position: absolute;
     top: 47.22%;
     transform-origin: center;
 }
 
-.header__toggle button.toggle_btn .line-bot {
+.header__toggle button.toggle-btn .line-bot {
     position: absolute;
     top: 72.22%;
     transform-origin: center;
 }
 
-.header__toggle button.toggle_btn[aria-expanded='true'] .line-top {
+.header__toggle button.toggle-btn[aria-expanded='true'] .line-top {
     top: 47.22%;
     rotate: 45deg;
 }
 
-.header__toggle button.toggle_btn[aria-expanded='true'] .line-mid {
+.header__toggle button.toggle-btn[aria-expanded='true'] .line-mid {
     opacity: 0;
 }
 
-.header__toggle button.toggle_btn[aria-expanded='true'] .line-bot {
+.header__toggle button.toggle-btn[aria-expanded='true'] .line-bot {
     top: 47.22%;
     rotate: -45deg;
 }
@@ -380,10 +385,10 @@ section.banner__section {
 .footer {
     background-color: #fcb404;
     padding: 2rem 0;
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
 }
 
-.footer__content{
+.footer__content {
     margin: auto 1rem;
 }
 
@@ -410,9 +415,13 @@ section.banner__section {
 }
 
 .footer__socialicons ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.25rem;
     color: #F3C301;
     transition: color 150ms ease-in-out;
+    text-align: center;
 }
 
 .footer__socialicons ul li:hover {
@@ -424,7 +433,77 @@ section.banner__section {
 }
 
 .footer__socialicons {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+/* Contact styles */
+.contact__section {
+    background: #FEE3A2;
+    margin-bottom: 0px;
+    padding-block: 1rem 4rem;
+
+}
+
+.contact__content {
+    margin: auto 1rem;
+    color: #3B566E;
+}
+
+.contact_input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    border: none;
+    outline: none;
+    border-radius: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+textarea.contact_input {
+    resize: none;
+    width: 100%;
+}
+
+.contact-form button[type="submit"] {
+    background: #F3C301;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    transition: background-color 150ms ease-in-out;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #fcb404;
+}
+
+/* whatsapp icon */
+.whatsapp_icon {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+}
+
+.whatsapp_icon button{
+    border: none;
+    background: #25D366;
+
+    border-radius: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp_icon button a {
+    display: flex;
+    font-size: 2rem;
+    color: #ffffff;
+    background: #25D366;
 }
 
 @media (min-width: 1140px) {
@@ -478,6 +557,20 @@ section.banner__section {
     .about__content__child {
         flex-basis: 50%;
     }
+
+    .contact__content .left {
+        flex-basis: 40% !important;
+    }
+
+    .contact__content .right {
+        flex-basis: 60% !important;
+    }
+
+    .contact__inpgrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
 }
 
 @media (min-width: 600px) {
@@ -504,8 +597,19 @@ section.banner__section {
     .main__content {
         grid-template-columns: 1fr 1fr;
     }
-    .footer__content{
+
+    .footer__content {
         margin: auto;
+    }
+
+    .contact__content {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .contact__content .left,
+    .contact__content .right {
+        flex-basis: 50%;
     }
 }
 

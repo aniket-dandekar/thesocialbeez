@@ -33,17 +33,38 @@
 .bx-shadow{
     box-shadow: 0px 0px 15px rgb(0 0 0 / 10%);
 }
-.mx-1{
-    margin-block: 1rem;
-}
-.mx-1_2{
-    margin-block: 0.5rem;
+.mx-1_8{
+    margin-block: 0.125rem;
 }
 .mx-1_4{
     margin-block: 0.25rem;
 }
-.mx-1_4{
-    margin-block: 0.125rem;
+.mx-1_2{
+    margin-block: 0.5rem;
+}
+.mx-1{
+    margin-block: 1rem;
+}
+.mx-2{
+    margin-block: 2rem;
+}
+.mx-3{
+    margin-block: 3rem;
+}
+.mx-4{
+    margin-block: 4rem;
+}
+.mb-1{
+    margin-bottom: 1rem;
+}
+.mb-2{
+    margin-bottom: 2rem;
+}
+.mb-3{
+    margin-bottom: 3rem;
+}
+.mb-4{
+    margin-bottom: 4rem;
 }
 .mt-5{
     margin-top: 5rem;
