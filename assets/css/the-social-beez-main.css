@@ -56,6 +56,8 @@ html {
 
 body {
     background-color: #f5f5f5;
+    height: -webkit-fill-available;
+
 }
 
 .wrapper {
@@ -73,6 +75,11 @@ body {
 .section-mps {
     margin: 1rem auto;
     padding: 4rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 /* header section */
@@ -325,11 +332,11 @@ section.banner__section {
     color: #ffffff;
 }
 
-.main__container {
+.services__container {
     margin: auto;
 }
 
-.main__content {
+.services__content {
     margin: auto 1rem;
     display: grid;
     grid-template-columns: 1fr;
@@ -338,7 +345,7 @@ section.banner__section {
 
 /* main card */
 
-.main__card {
+.services__card {
     background-color: #ffffff;
     border-radius: 1rem;
     margin: 1rem auto;
@@ -347,11 +354,11 @@ section.banner__section {
     transition: transform 150ms ease-in;
 }
 
-.main__card:hover {
+.services__card:hover {
     transform: scale(1.04);
 }
 
-.main__card .card__img {
+.services__card .card__img {
     background-color: #FEE3A2;
     border-radius: 2rem;
     min-height: 3rem;
@@ -359,11 +366,11 @@ section.banner__section {
     margin: 0.5rem auto;
 }
 
-.main__card .card__img img {
+.services__card .card__img img {
     height: 2rem;
 }
 
-.main__card .card__title {
+.services__card .card__title {
     font-weight: 400;
     font-size: 1.25rem;
 }
@@ -487,9 +494,10 @@ textarea.contact_input {
     bottom: 0;
     right: 0;
     margin: 1rem;
+    z-index: 9999;
 }
 
-.whatsapp_icon button{
+.whatsapp_icon button {
     border: none;
     background: #25D366;
 
@@ -508,6 +516,67 @@ textarea.contact_input {
     color: #ffffff;
     background: #25D366;
 }
+
+/* Work process section */
+.wp__section {
+    background: linear-gradient(135deg, transparent, #fcb404);
+}
+
+.wp__content{
+    justify-content: space-evenly;
+}
+.wp__cards {
+    z-index: 2;
+    box-shadow: 0 2px 48px 0 rgb(0 0 0 / 8%);
+    margin-bottom: 2rem;
+    position: relative;
+    text-align: center;
+    max-width: 8rem;
+    cursor: pointer;
+    transition: transform 200ms ease-in-out;
+}
+
+.wp__cards::before{
+    z-index: 1;
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0.5rem;
+    left: 0.75rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.wp__cards:hover{
+    z-index: 2;
+    transform: translate(0px , -0.375rem);
+}
+
+.wp__cards .wp__cardbox{
+    position: relative;
+    z-index: 2;
+    border-radius: 1rem;
+    background: #fff;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.wp__cardbox i img{
+    width: 2.5rem;
+}
+
+.wp__cardbox span.wp__title{
+    margin: 0.375rem auto;
+    font-weight: 600;
+    color: #303030;
+}
+
+.wp__cardbox span.text-gray{
+    font-size: 0.875rem;
+}
+
 
 @media (min-width: 1140px) {
     .header__container {
@@ -553,7 +622,7 @@ textarea.contact_input {
         display: none;
     }
 
-    .main__content {
+    .services__content {
         grid-template-columns: 1fr 1fr 1fr !important;
     }
 
@@ -574,13 +643,14 @@ textarea.contact_input {
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
     }
-    /* .main__card{
+
+    /* .services__card{
         max-height: 13rem;
     } */
-    /* .main__card.card__sides{
+    /* .services__card.card__sides{
         margin-top: 50%;
     } */
-    /* .main__card.card__mid{
+    /* .services__card.card__mid{
         margin-bottom: 2rem;
     } */
 }
@@ -606,7 +676,7 @@ textarea.contact_input {
         font-size: 1rem;
     }
 
-    .main__content {
+    .services__content {
         grid-template-columns: 1fr 1fr;
     }
 
